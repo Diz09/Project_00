@@ -1,0 +1,2 @@
+swing.jScrollBar.horizontal.ModernScrollBarHorizontal$ScrollBarButton
+swing.jScrollBar.horizontal.ModernScrollBarHorizontal
