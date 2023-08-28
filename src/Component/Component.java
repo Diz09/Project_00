@@ -1,6 +1,7 @@
 package Component;
 
 import Connect.DBConnection;
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -18,6 +19,7 @@ public class Component extends javax.swing.JPanel {
         setInitRankLayanan();
         setInitRankBarang();
         setInitNewTransaksi();
+        popUp_keluar.setVisible(false);
     }
     
     private void setIconInitAll(){
@@ -723,7 +725,12 @@ public class Component extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        combobox1 = new swing.comboBox.Combobox();
+        popUp_keluar = new javax.swing.JPanel();
+        bg_keluar = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        filter = new swing.comboBox.Combobox();
         title1 = new javax.swing.JLabel();
         title2 = new javax.swing.JLabel();
         title3 = new javax.swing.JLabel();
@@ -771,262 +778,352 @@ public class Component extends javax.swing.JPanel {
         priceNTrsn4 = new javax.swing.JLabel();
         priceNTrsn5 = new javax.swing.JLabel();
         priceNTrsn6 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        lbl_formDashboard = new javax.swing.JLabel();
+        lbl_formStock = new javax.swing.JLabel();
+        lbl_formLayanan = new javax.swing.JLabel();
+        lbl_formTransaksi = new javax.swing.JLabel();
+        lbl_formLaporan = new javax.swing.JLabel();
+        lbl_formPegawai = new javax.swing.JLabel();
+        Logout = new javax.swing.JLabel();
         borderHide = new javax.swing.JLabel();
-        borderShow = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(235, 237, 241));
         setPreferredSize(new java.awt.Dimension(1920, 1080));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setLayout(null);
 
-        combobox1.setBorder(null);
-        combobox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "All", "in Days", "in Weeks", "in Months", "in Years" }));
-        combobox1.setSelectedIndex(3);
-        combobox1.setFont(new java.awt.Font("Microsoft Tai Le", 0, 12)); // NOI18N
-        combobox1.setLabeTaxt("");
-        combobox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                combobox1ActionPerformed(evt);
+        popUp_keluar.setBackground(new Color(0, 0, 0, 200));
+        popUp_keluar.setLayout(null);
+
+        bg_keluar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Validasi LogOut.png"))); // NOI18N
+        popUp_keluar.add(bg_keluar);
+        bg_keluar.setBounds(608, 380, 704, 320);
+
+        jLabel1.setText("jLabel1");
+        jLabel1.setOpaque(true);
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
             }
         });
-        add(combobox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1690, 120, 140, 30));
+        popUp_keluar.add(jLabel1);
+        jLabel1.setBounds(778, 597, 164, 38);
+
+        jLabel2.setText("jLabel1");
+        jLabel2.setOpaque(true);
+        popUp_keluar.add(jLabel2);
+        jLabel2.setBounds(978, 597, 164, 38);
+
+        jLabel3.setText("jLabel1");
+        jLabel3.setOpaque(true);
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+        popUp_keluar.add(jLabel3);
+        jLabel3.setBounds(1240, 395, 44, 43);
+
+        add(popUp_keluar);
+        popUp_keluar.setBounds(0, 0, 1920, 1080);
+
+        filter.setBorder(null);
+        filter.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "All", "in Days", "in Weeks", "in Months", "in Years" }));
+        filter.setSelectedIndex(3);
+        filter.setFont(new java.awt.Font("Microsoft Tai Le", 0, 12)); // NOI18N
+        filter.setLabeTaxt("");
+        filter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filterActionPerformed(evt);
+            }
+        });
+        add(filter);
+        filter.setBounds(1690, 120, 140, 30);
 
         title1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 32)); // NOI18N
         title1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title1.setText("Client Bulan Ini");
-        add(title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(478, 185, 290, 30));
+        add(title1);
+        title1.setBounds(478, 185, 290, 30);
 
         title2.setFont(new java.awt.Font("Microsoft Tai Le", 1, 32)); // NOI18N
         title2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title2.setText("Transaksi");
-        add(title2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 185, 230, 30));
+        add(title2);
+        title2.setBounds(800, 185, 230, 30);
 
         title3.setFont(new java.awt.Font("Microsoft Tai Le", 1, 32)); // NOI18N
         title3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title3.setText("Jumlah Pendapatan");
-        add(title3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 185, 390, 30));
+        add(title3);
+        title3.setBounds(1060, 185, 390, 30);
 
         title4.setFont(new java.awt.Font("Microsoft Tai Le", 1, 32)); // NOI18N
         title4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title4.setText("Presentase Untung");
-        add(title4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1460, 185, 340, 30));
-        add(toTransaksi, new org.netbeans.lib.awtextra.AbsoluteConstraints(1710, 1006, 130, 20));
+        add(title4);
+        title4.setBounds(1460, 185, 340, 30);
+        add(toTransaksi);
+        toTransaksi.setBounds(1710, 1006, 130, 20);
 
         txt_client.setFont(new java.awt.Font("Microsoft Tai Le", 1, 64)); // NOI18N
         txt_client.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt_client.setText("300");
-        add(txt_client, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 238, 120, 60));
+        add(txt_client);
+        txt_client.setBounds(590, 238, 120, 60);
 
         txt_transaksi.setFont(new java.awt.Font("Microsoft Tai Le", 1, 64)); // NOI18N
         txt_transaksi.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt_transaksi.setText("3000");
-        add(txt_transaksi, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 238, 150, 60));
+        add(txt_transaksi);
+        txt_transaksi.setBounds(870, 238, 150, 60);
 
         txt_pendapatan.setFont(new java.awt.Font("Microsoft Tai Le", 1, 64)); // NOI18N
         txt_pendapatan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt_pendapatan.setText("9,000,000");
-        add(txt_pendapatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 238, 290, 60));
+        add(txt_pendapatan);
+        txt_pendapatan.setBounds(1140, 238, 290, 60);
 
         txt_laba.setFont(new java.awt.Font("Microsoft Tai Le", 1, 64)); // NOI18N
         txt_laba.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt_laba.setText("90.0 %");
-        add(txt_laba, new org.netbeans.lib.awtextra.AbsoluteConstraints(1570, 238, -1, 60));
+        add(txt_laba);
+        txt_laba.setBounds(1570, 238, 202, 60);
 
         icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/up.png"))); // NOI18N
-        add(icon1, new org.netbeans.lib.awtextra.AbsoluteConstraints(525, 238, -1, -1));
+        add(icon1);
+        icon1.setBounds(525, 238, 56, 56);
 
         icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/down.png"))); // NOI18N
-        add(icon2, new org.netbeans.lib.awtextra.AbsoluteConstraints(525, 238, -1, -1));
+        add(icon2);
+        icon2.setBounds(525, 238, 56, 56);
 
         icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/up.png"))); // NOI18N
-        add(icon3, new org.netbeans.lib.awtextra.AbsoluteConstraints(811, 238, -1, -1));
+        add(icon3);
+        icon3.setBounds(811, 238, 56, 56);
 
         icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/down.png"))); // NOI18N
-        add(icon4, new org.netbeans.lib.awtextra.AbsoluteConstraints(811, 238, -1, -1));
+        add(icon4);
+        icon4.setBounds(811, 238, 56, 56);
 
         icon5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/up.png"))); // NOI18N
-        add(icon5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 238, -1, -1));
+        add(icon5);
+        icon5.setBounds(1070, 238, 56, 56);
 
         icon6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/down.png"))); // NOI18N
-        add(icon6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 238, -1, -1));
+        add(icon6);
+        icon6.setBounds(1070, 238, 56, 56);
 
         icon7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/up.png"))); // NOI18N
-        add(icon7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1500, 238, -1, -1));
+        add(icon7);
+        icon7.setBounds(1500, 238, 56, 56);
 
         icon8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/down.png"))); // NOI18N
-        add(icon8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1500, 238, -1, -1));
+        add(icon8);
+        icon8.setBounds(1500, 238, 56, 56);
 
         titleRLayanan1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 22)); // NOI18N
         titleRLayanan1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleRLayanan1.setText("Gromming Sehat");
-        add(titleRLayanan1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 576, 230, 30));
+        add(titleRLayanan1);
+        titleRLayanan1.setBounds(450, 576, 230, 30);
 
         titleRLayanan2.setFont(new java.awt.Font("Microsoft Tai Le", 1, 22)); // NOI18N
         titleRLayanan2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleRLayanan2.setText("Gromming Kutu");
-        add(titleRLayanan2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 576, 240, 30));
+        add(titleRLayanan2);
+        titleRLayanan2.setBounds(720, 576, 240, 30);
 
         titleRLayanan3.setFont(new java.awt.Font("Microsoft Tai Le", 1, 22)); // NOI18N
         titleRLayanan3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleRLayanan3.setText("Klinik");
-        add(titleRLayanan3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 576, 230, 30));
+        add(titleRLayanan3);
+        titleRLayanan3.setBounds(1000, 576, 230, 30);
 
         descRLayanan1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
         descRLayanan1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         descRLayanan1.setText("Gromming Kucing Sehat");
         descRLayanan1.setPreferredSize(new java.awt.Dimension(175, 16));
-        add(descRLayanan1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 608, 230, 20));
+        add(descRLayanan1);
+        descRLayanan1.setBounds(450, 608, 230, 20);
 
         descRLayanan2.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
         descRLayanan2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         descRLayanan2.setText("Gromming Kucing Sehat");
         descRLayanan2.setPreferredSize(new java.awt.Dimension(175, 16));
-        add(descRLayanan2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 608, 240, 20));
+        add(descRLayanan2);
+        descRLayanan2.setBounds(720, 608, 240, 20);
 
         descRLayanan3.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
         descRLayanan3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         descRLayanan3.setText("Gromming Kucing Sehat");
         descRLayanan3.setPreferredSize(new java.awt.Dimension(175, 16));
-        add(descRLayanan3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 608, 230, 20));
+        add(descRLayanan3);
+        descRLayanan3.setBounds(1000, 608, 230, 20);
 
         titleRBarang1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 22)); // NOI18N
         titleRBarang1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleRBarang1.setText("Whiskas");
-        add(titleRBarang1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 870, 230, 30));
+        add(titleRBarang1);
+        titleRBarang1.setBounds(450, 870, 230, 30);
 
         titleRBarang2.setFont(new java.awt.Font("Microsoft Tai Le", 1, 22)); // NOI18N
         titleRBarang2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleRBarang2.setText("Susu Ultramilk");
-        add(titleRBarang2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 870, 240, 30));
+        add(titleRBarang2);
+        titleRBarang2.setBounds(720, 870, 240, 30);
 
         titleRBarang3.setFont(new java.awt.Font("Microsoft Tai Le", 1, 22)); // NOI18N
         titleRBarang3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleRBarang3.setText("Aksesoris");
-        add(titleRBarang3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 870, 230, 30));
+        add(titleRBarang3);
+        titleRBarang3.setBounds(1000, 870, 230, 30);
 
         descRBarang1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
         descRBarang1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         descRBarang1.setText("Whiskas varian Sedang");
         descRBarang1.setPreferredSize(new java.awt.Dimension(175, 16));
-        add(descRBarang1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 900, 230, 20));
+        add(descRBarang1);
+        descRBarang1.setBounds(450, 900, 230, 20);
 
         descRBarang2.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
         descRBarang2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         descRBarang2.setText("Susu Ultramilk 30g");
         descRBarang2.setPreferredSize(new java.awt.Dimension(175, 16));
-        add(descRBarang2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 900, 240, 20));
+        add(descRBarang2);
+        descRBarang2.setBounds(720, 900, 240, 20);
 
         descRBarang3.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
         descRBarang3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         descRBarang3.setText("Hodie Kucing");
         descRBarang3.setPreferredSize(new java.awt.Dimension(175, 16));
-        add(descRBarang3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 900, 230, 20));
+        add(descRBarang3);
+        descRBarang3.setBounds(1000, 900, 230, 20);
 
         sumberNTrsn1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 20)); // NOI18N
         sumberNTrsn1.setText("Gromming");
-        add(sumberNTrsn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1448, 458, 220, 30));
+        add(sumberNTrsn1);
+        sumberNTrsn1.setBounds(1448, 458, 220, 30);
 
         sumberNTrsn2.setFont(new java.awt.Font("Microsoft Tai Le", 1, 20)); // NOI18N
         sumberNTrsn2.setText("Gromming");
-        add(sumberNTrsn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1448, 550, 220, 30));
+        add(sumberNTrsn2);
+        sumberNTrsn2.setBounds(1448, 550, 220, 30);
 
         sumberNTrsn3.setFont(new java.awt.Font("Microsoft Tai Le", 1, 20)); // NOI18N
         sumberNTrsn3.setText("Gromming");
-        add(sumberNTrsn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1448, 645, 220, 30));
+        add(sumberNTrsn3);
+        sumberNTrsn3.setBounds(1448, 645, 220, 30);
 
         sumberNTrsn4.setFont(new java.awt.Font("Microsoft Tai Le", 1, 20)); // NOI18N
         sumberNTrsn4.setText("Gromming");
-        add(sumberNTrsn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1448, 738, 220, 30));
+        add(sumberNTrsn4);
+        sumberNTrsn4.setBounds(1448, 738, 220, 30);
 
         sumberNTrsn5.setFont(new java.awt.Font("Microsoft Tai Le", 1, 20)); // NOI18N
         sumberNTrsn5.setText("Gromming");
-        add(sumberNTrsn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1448, 830, 220, 30));
+        add(sumberNTrsn5);
+        sumberNTrsn5.setBounds(1448, 830, 220, 30);
 
         sumberNTrsn6.setFont(new java.awt.Font("Microsoft Tai Le", 1, 20)); // NOI18N
         sumberNTrsn6.setText("Gromming");
-        add(sumberNTrsn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1448, 924, 220, 30));
+        add(sumberNTrsn6);
+        sumberNTrsn6.setBounds(1448, 924, 220, 30);
 
         titleNTrsn1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 18)); // NOI18N
         titleNTrsn1.setText("Gromming Kutu");
-        add(titleNTrsn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1448, 488, 220, 20));
+        add(titleNTrsn1);
+        titleNTrsn1.setBounds(1448, 488, 220, 20);
 
         titleNTrsn2.setFont(new java.awt.Font("Microsoft Tai Le", 1, 18)); // NOI18N
         titleNTrsn2.setText("Gromming Kutu");
-        add(titleNTrsn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1448, 580, 220, 20));
+        add(titleNTrsn2);
+        titleNTrsn2.setBounds(1448, 580, 220, 20);
 
         titleNTrsn3.setFont(new java.awt.Font("Microsoft Tai Le", 1, 18)); // NOI18N
         titleNTrsn3.setText("Gromming Kutu");
-        add(titleNTrsn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1448, 673, 220, 20));
+        add(titleNTrsn3);
+        titleNTrsn3.setBounds(1448, 673, 220, 20);
 
         titleNTrsn4.setFont(new java.awt.Font("Microsoft Tai Le", 1, 18)); // NOI18N
         titleNTrsn4.setText("Gromming Kutu");
-        add(titleNTrsn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1448, 765, 220, 20));
+        add(titleNTrsn4);
+        titleNTrsn4.setBounds(1448, 765, 220, 20);
 
         titleNTrsn5.setFont(new java.awt.Font("Microsoft Tai Le", 1, 18)); // NOI18N
         titleNTrsn5.setText("Gromming Kutu");
-        add(titleNTrsn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1448, 860, 220, 20));
+        add(titleNTrsn5);
+        titleNTrsn5.setBounds(1448, 860, 220, 20);
 
         titleNTrsn6.setFont(new java.awt.Font("Microsoft Tai Le", 1, 18)); // NOI18N
         titleNTrsn6.setText("Gromming Kutu");
-        add(titleNTrsn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1448, 952, 220, 20));
+        add(titleNTrsn6);
+        titleNTrsn6.setBounds(1448, 952, 220, 20);
 
         priceNTrsn1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         priceNTrsn1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         priceNTrsn1.setText("40,000");
-        add(priceNTrsn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1670, 470, 140, 40));
+        add(priceNTrsn1);
+        priceNTrsn1.setBounds(1670, 470, 140, 40);
 
         priceNTrsn2.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         priceNTrsn2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         priceNTrsn2.setText("40,000");
-        add(priceNTrsn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1670, 562, 140, 40));
+        add(priceNTrsn2);
+        priceNTrsn2.setBounds(1670, 562, 140, 40);
 
         priceNTrsn3.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         priceNTrsn3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         priceNTrsn3.setText("40,000");
-        add(priceNTrsn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1670, 655, 140, 40));
+        add(priceNTrsn3);
+        priceNTrsn3.setBounds(1670, 655, 140, 40);
 
         priceNTrsn4.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         priceNTrsn4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         priceNTrsn4.setText("40,000");
-        add(priceNTrsn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1670, 750, 140, 40));
+        add(priceNTrsn4);
+        priceNTrsn4.setBounds(1670, 750, 140, 40);
 
         priceNTrsn5.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         priceNTrsn5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         priceNTrsn5.setText("40,000");
-        add(priceNTrsn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1670, 840, 140, 40));
+        add(priceNTrsn5);
+        priceNTrsn5.setBounds(1670, 840, 140, 40);
 
         priceNTrsn6.setFont(new java.awt.Font("Microsoft Tai Le", 1, 24)); // NOI18N
         priceNTrsn6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         priceNTrsn6.setText("40,000");
-        add(priceNTrsn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1670, 935, 140, 40));
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 206, 343, 66));
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 343, 66));
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 343, 66));
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 343, 66));
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 343, 66));
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 570, 343, 66));
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 650, 343, 66));
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 970, 343, 66));
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 720, 343, 66));
+        add(priceNTrsn6);
+        priceNTrsn6.setBounds(1670, 935, 140, 40);
+        add(lbl_formDashboard);
+        lbl_formDashboard.setBounds(0, 206, 343, 66);
+        add(lbl_formStock);
+        lbl_formStock.setBounds(0, 270, 343, 66);
+        add(lbl_formLayanan);
+        lbl_formLayanan.setBounds(0, 350, 343, 66);
+        add(lbl_formTransaksi);
+        lbl_formTransaksi.setBounds(0, 420, 343, 66);
+        add(lbl_formLaporan);
+        lbl_formLaporan.setBounds(0, 500, 343, 66);
+        add(lbl_formPegawai);
+        lbl_formPegawai.setBounds(0, 570, 343, 66);
+
+        Logout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LogoutMouseClicked(evt);
+            }
+        });
+        add(Logout);
+        Logout.setBounds(0, 970, 343, 66);
 
         borderHide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/dashboard.png"))); // NOI18N
-        add(borderHide, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        borderShow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/dashboard (1).png"))); // NOI18N
-        add(borderShow, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        borderHide.setPreferredSize(new java.awt.Dimension(1920, 1080));
+        add(borderHide);
+        borderHide.setBounds(0, 0, 1920, 1080);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void combobox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combobox1ActionPerformed
+    private void filterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterActionPerformed
         // TODO add your handling code here:
-        String data = (String) combobox1.getSelectedItem();
+        String data = (String) filter.getSelectedItem();
         if (data.equals("All")){
             title1.setText("Client");
             setIconInitAll();
@@ -1043,7 +1140,20 @@ public class Component extends javax.swing.JPanel {
             title1.setText("Client Tahun Ini");
             setIconInitYear();
         }
-    }//GEN-LAST:event_combobox1ActionPerformed
+    }//GEN-LAST:event_filterActionPerformed
+
+    private void LogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutMouseClicked
+        filter.setOpaque(false);
+        popUp_keluar.setVisible(true);
+    }//GEN-LAST:event_LogoutMouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        popUp_keluar.setVisible(false);
+    }//GEN-LAST:event_jLabel3MouseClicked
 
     @Override
     protected void paintComponent(Graphics grphcs) {
@@ -1055,15 +1165,16 @@ public class Component extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Logout;
+    private javax.swing.JLabel bg_keluar;
     private javax.swing.JLabel borderHide;
-    private javax.swing.JLabel borderShow;
-    private swing.comboBox.Combobox combobox1;
     private javax.swing.JLabel descRBarang1;
     private javax.swing.JLabel descRBarang2;
     private javax.swing.JLabel descRBarang3;
     private javax.swing.JLabel descRLayanan1;
     private javax.swing.JLabel descRLayanan2;
     private javax.swing.JLabel descRLayanan3;
+    private swing.comboBox.Combobox filter;
     private javax.swing.JLabel icon1;
     private javax.swing.JLabel icon2;
     private javax.swing.JLabel icon3;
@@ -1075,12 +1186,13 @@ public class Component extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel lbl_formDashboard;
+    private javax.swing.JLabel lbl_formLaporan;
+    private javax.swing.JLabel lbl_formLayanan;
+    private javax.swing.JLabel lbl_formPegawai;
+    private javax.swing.JLabel lbl_formStock;
+    private javax.swing.JLabel lbl_formTransaksi;
+    private javax.swing.JPanel popUp_keluar;
     private javax.swing.JLabel priceNTrsn1;
     private javax.swing.JLabel priceNTrsn2;
     private javax.swing.JLabel priceNTrsn3;

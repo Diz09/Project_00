@@ -1,8 +1,10 @@
 package Main;
 
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import swing.jScrollBar.horizontal.ScrollBarCustom2;
 import swing.jScrollBar.vertical.ScrollBarCustom1;
+import Component.Component;
 
 public class main extends javax.swing.JFrame {
 
@@ -11,6 +13,14 @@ public class main extends javax.swing.JFrame {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         jc.setVerticalScrollBar(new ScrollBarCustom1());
         jc.setHorizontalScrollBar(new ScrollBarCustom2());
+        setForm(new Component());
+    }
+    
+    private void setForm(JComponent com) {
+        MainPanel.removeAll();
+        MainPanel.add(com);
+        MainPanel.repaint();
+        MainPanel.revalidate();
     }
     
     @SuppressWarnings("unchecked")
@@ -18,13 +28,14 @@ public class main extends javax.swing.JFrame {
     private void initComponents() {
 
         jc = new javax.swing.JScrollPane();
-        component2 = new Component.Component();
+        MainPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1576, 1080));
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
-        jc.setViewportView(component2);
+        jc.setViewportView(MainPanel);
 
         getContentPane().add(jc);
 
@@ -66,7 +77,7 @@ public class main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private Component.Component component2;
+    private javax.swing.JPanel MainPanel;
     private javax.swing.JScrollPane jc;
     // End of variables declaration//GEN-END:variables
 }
